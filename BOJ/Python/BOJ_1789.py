@@ -1,9 +1,10 @@
-# 푸는 중~
+N = int(input())
 
-S = int(input())
 sum = 0
+i = 0
 
-for i in range(4294967295) :
-    pass
+while (sum <= N) :
+    i += 1
+    sum += i
 
-print(i, sum)
+print(i-1)
