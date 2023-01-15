@@ -19,7 +19,7 @@
 #
 #     print(n[p.index(max(p))])
 
-## 세번째 시도 >> 260ms
+## 세번째 시도 >> 260ms 나름 만족..^^
 for _ in range(int(input())) :
     max_p, max_n = 0, ''
     for _ in range(int(input())) :
