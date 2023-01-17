@@ -32,7 +32,7 @@
 # print(min_case[0])
 # print(max_case[0])
 
-## 다른 사람 정답 보고 안 것. lambda 공부해야겠다. 지금~!! 당장
+## 다른 사람 정답 보고 안 것. lambda와 정렬 함수를 공부하고 나니 이해가 된다.. 세상에..
 n = int(input())
 a = []
 for i in range(n):
@@ -41,7 +41,9 @@ for i in range(n):
         b[i] = int(b[i])
     a.append(b)
 print(a)
+# 이차원으로 이름, 일, 월, 연도가 저장된 리스트를 연도, 월, 일 순으로 오름차순 정렬을 진행함.
 a.sort(key = lambda x: (x[3],x[2],x[1]))
 print(a)
+
 print(a[-1][0])
 print(a[0][0])
