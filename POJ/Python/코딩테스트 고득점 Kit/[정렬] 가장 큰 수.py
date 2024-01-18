@@ -2,5 +2,56 @@
 # [3, 30, 34, 5, 9] -> 9534330
 # 3, 30, 34를 34, 3, 30 순으로 정렬해야함 -> 어떻게?
 
-def solution(numbers):
-    return "".join(sorted(map(str, numbers), reverse=True))
+# def solution(numbers):
+#     return "".join(sorted(map(str, numbers), reverse=True))
+
+
+# [3, 30, 34, 5, 9] -> 9534330
+# 3, 30, 31, 34를 34, 3, 31, 30 순으로 정렬해야함
+# 한 원소가 2자리면 2번째 수가 1번째 수보다 크면 우선순위가 높다
+#
+# 1) 가장 첫번째 자리 숫자가 큰 순서대로 정렬해야 함 -> 전부 str로 바꿔 정렬 후 붙이고 int로
+# 1-1) 가장 첫번쨰 자리 숫자가 큰 순서대로 정렬하는데, 이때 앞 자리가 같은 경우
+
+# 조건 1. 가장 첫번째 자리
+# 조건 2. 첫 번째 자리가 같을 때, 그 다음 자리 값에 따라 우선순위가 달라진다
+#   -> 한 자리면 그냥 append, 두 번째 자리의 크기에 따라 append, 두
+# 원소가 0 이상 1,000 이하이므로 세 자리에 따라 정렬하면 되는데...
+# 원소 자릿수가 1, 2인 경우에서는 오류가 난다
+# 3, 332, 334, 330 -> 334 3 332 330
+
+# 파이썬 기본 라이브러리를 쓰기보다 자체적으로 반복문을 활용해서 정렬하는 게 나을 수도 있것다는 생각.. 흠
+
+# 1. 일차적으로 첫 번째 자리로 정렬
+# 2. 1 ~ 9까지 돌면서 n이 첫번째로 들어가는 경우만 실행
+#     while "1" in nums[i]:
+# 3. 한 번 더 첫번째로 들어가는 경우를 모아 두, 세번째 자리를 기준으로 정렬
+# 4. 합쳐. 끝.
+# 아..이거아닌것같은데 효과적인 방법이 잘 안떠오르네...
+
+
+def solution(nums):
+    # 내림차순 정렬
+    nums.sort(reverse=True)
+    # 각 숫자별로 몇개씩 있는지 카운트용
+    cnt = [n[0] for n in nums]
+
+    res = []
+    for i in map(str, range(1, 10)):
+        idx = cnt.index(i)
+        sub = nums[idx:idx+cnt.count(i)]
+        sub_res = []
+        for s in sub:
+            if len(s) == 1:
+                sub_res.append(s)
+            else:
+                # 아 이거 아닌드에엥ㅇ아닌ㄷㅔ이거어
+
+
+
+
+
+
+
+
+    return "".join(sorted_numbers)
