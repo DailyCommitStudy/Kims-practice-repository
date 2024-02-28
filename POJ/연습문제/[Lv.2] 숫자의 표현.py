@@ -16,7 +16,9 @@ def solution(n):
 
 
 ## 다른 사람의 코드
-# 나랑 푸는 관점 자체가 달랐네
+# 나랑 푸는 관점 자체가 달랐네......
+# 난 연속되는 숫자의 '개수'에 집착하느라 제대로 풀지 못한듯
+# 하 빡쳐 미친것..
 def solution(n):
     answer = 1 # 본인
 
@@ -34,3 +36,8 @@ def solution(n):
             i += 1
 
     return answer
+
+## 다른 사람의 코드2
+# 뭐지 시ㅏㄹ..수학과를 가얗ㅅ나보다 내가..
+def expressions(num):
+    return len([i  for i in range(1,num+1,2) if num % i is 0])
